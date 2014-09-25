@@ -1,0 +1,27 @@
+{
+  "name": "upyun-sign",
+  "version": "0.1.0",
+  "description": "a cli tool for creating upyun form signature by given api_secret",
+  "main": "index.js",
+  "bin": "./bin/cli",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:turingou/upyun-sign.git"
+  },
+  "keywords": [
+    "upyun",
+    "signin",
+    "upyun-form",
+    "qiniu",
+    "upyun-angular"
+  ],
+  "author": "turing <o.u.turing@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turingou/upyun-sign/issues"
+  },
+  "homepage": "https://github.com/turingou/upyun-sign"
+}
