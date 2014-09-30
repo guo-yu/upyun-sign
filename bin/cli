@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var createSignature = require('..');
+var argv = process.argv;
+var form_api_secret = argv[2];
+var params = argv[3];
+
+if (!form_api_secret)
+  throw new Error('createSignature(); form_api_secret is required.');
+
+process.stdout.write(
+  JSON.stringify(
+    createSignature(form_api_secret, params || null)
+  )
+);

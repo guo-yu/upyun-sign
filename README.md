@@ -7,12 +7,22 @@ a cli tool for creating upyun form signature by given api_secret
 $ [sudo] npm install -g upyun-sign
 ```
 
+### CLI Useage
+
+When using upyun-sign cli tool, `form_api_secret` must be string, and it's required.
+`params` must be JSON string, it's optional.
+
+```bash
+$ upyun-sign <form_api_secret> <params>
+```
+
 ### Example
 ```js
-var upyunSign = require('upyun-sign');
-var signature = upyunSign.create({
-  api_secret: 'xxxxxxxxx'
-});
+var createSignature = require('upyun-sign');
+var resultString = createSignature('<form_api_secret>');
+
+console.log(resultString.policy);
+console.log(resultString.signature);
 ```
 
 ### Contributing
