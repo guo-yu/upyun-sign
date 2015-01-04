@@ -1,26 +1,11 @@
 #!/usr/bin/env node
 
 var createSignature = require('..');
-var argv = process.argv;
-var form_api_secret = argv[2];
-var params = argv[3];
+var argv = require('minimist')(process.argv.slice(2));
 
-if (!form_api_secret)
+if (!argv.form_api_secret || !argv.bucket)
   throw new Error('createSignature(); form_api_secret is required.');
 
-console.log(typeof(params));
-console.log(params);
-
-if (params) {
-  try {
-    var options = JSON.parse(params);
-  } catch (err) {
-    throw new Error('JSON parse error, please check input');
-  }
-}
-
-process.stdout.write(
-  JSON.stringify(
-    createSignature(form_api_secret, params ? options : null)
-  )
-);
+process
+  .stdout
+  .write(JSON.stringify(createSignature(argv)) + '\n');

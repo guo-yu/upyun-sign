@@ -5,7 +5,8 @@
   "main": "index.js",
   "bin": "bin/cli",
   "scripts": {
-    "dev": "DEBUG=upyun-sign,upyun-sign:* bin/cli"
+    "cli": "DEBUG=upyun-sign,upyun-sign:* bin/cli",
+    "dev": "npm run cli"
   },
   "repository": {
     "type": "git",

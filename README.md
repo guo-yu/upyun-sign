@@ -14,28 +14,28 @@ When using upyun-sign cli tool, `form_api_secret` must be string, and it's requi
 
 ```bash
 $ upyun-sign \
-  --bucket exampledemo \
-  --form_api_secret L6RkvgdjMPWiBRyU 
-  --save-key /path/to/file.ext
-  --expiration 1409200758
-  --allow-file-type 
-  --content-length-range
-  --content-md5
-  --content-secret
-  --content-type
-  --image-width-range
-  --image-height-range
-  --notify-url
-  --return-url
-  --x-gmkerl-thumbnail
-  --x-gmkerl-type
-  --x-gmkerl-value
-  --x-gmkerl-quality
-  --x-gmkerl-unsharp
-  --x-gmkerl-rotate
-  --x-gmkerl-crop
-  --x-gmkerl-exif-switch
-  --ext-param
+  --bucket=exampledemo \
+  --form_api_secret=L6RkvgdjMPWiBRyU 
+  --save-key=/path/to/file.ext
+  --expiration=1409200758
+  --allow-file-type=
+  --content-length-range=
+  --content-md5=
+  --content-secret=
+  --content-type=
+  --image-width-range=
+  --image-height-range=
+  --notify-url=
+  --return-url=
+  --x-gmkerl-thumbnail=
+  --x-gmkerl-type=
+  --x-gmkerl-value=
+  --x-gmkerl-quality=
+  --x-gmkerl-unsharp=
+  --x-gmkerl-rotate=
+  --x-gmkerl-crop=
+  --x-gmkerl-exif-switch=
+  --ext-param=
 ```
 
 ### Example
