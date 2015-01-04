@@ -1,6 +1,6 @@
 ## upyun-sign ![NPM version](https://img.shields.io/npm/v/upyun-sign.svg?style=flat) 
 
-a cli tool for creating upyun form signature by given api_secret
+A cli tool for creating upyun form `policy` and `signature` by given `form_api_secret`.
 
 ### Installation
 ```bash
@@ -10,19 +10,45 @@ $ [sudo] npm install -g upyun-sign
 ### CLI Useage
 
 When using upyun-sign cli tool, `form_api_secret` must be string, and it's required.
-`params` must be JSON string, it's optional.
+`params` must be JSON string, it's optional. Check out Upyun's [documentation](http://docs.upyun.com/api/form_api/)
 
 ```bash
-$ upyun-sign <form_api_secret> <params>
+$ upyun-sign \
+  --bucket exampledemo \
+  --form_api_secret L6RkvgdjMPWiBRyU 
+  --save-key /path/to/file.ext
+  --expiration 1409200758
+  --allow-file-type 
+  --content-length-range
+  --content-md5
+  --content-secret
+  --content-type
+  --image-width-range
+  --image-height-range
+  --notify-url
+  --return-url
+  --x-gmkerl-thumbnail
+  --x-gmkerl-type
+  --x-gmkerl-value
+  --x-gmkerl-quality
+  --x-gmkerl-unsharp
+  --x-gmkerl-rotate
+  --x-gmkerl-crop
+  --x-gmkerl-exif-switch
+  --ext-param
 ```
 
 ### Example
 ```js
 var createSignature = require('upyun-sign');
-var resultString = createSignature('<form_api_secret>');
 
-console.log(resultString.policy);
-console.log(resultString.signature);
+var results = createSignature({
+  bucket: 'exampledemo',
+  form_api_secret: 'L6RkvgdjMPWiBRyU'
+});
+
+console.log(results.policy);
+console.log(results.signature);
 ```
 
 ### Contributing

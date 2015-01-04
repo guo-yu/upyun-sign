@@ -1,11 +1,11 @@
 {
   "name": "upyun-sign",
-  "version": "0.1.0",
-  "description": "a cli tool for creating upyun form signature by given api_secret",
+  "version": "0.2.0",
+  "description": "A cli tool for creating upyun form `policy` and `signature` by given `form_api_secret`.",
   "main": "index.js",
-  "bin": "./bin/cli",
+  "bin": "bin/cli",
   "scripts": {
-    "cli": "DEBUG=upyun-sign,upyun-sign:* node bin/cli"
+    "dev": "DEBUG=upyun-sign,upyun-sign:* bin/cli"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,7 @@
   "homepage": "https://github.com/turingou/upyun-sign",
   "dependencies": {
     "blueimp-md5": "^1.1.0",
-    "js-base64": "^2.1.5"
-  },
-  "devDependencies": {
-    "debug": "^2.0.0"
+    "js-base64": "^2.1.5",
+    "minimist": "^1.1.0"
   }
 }
